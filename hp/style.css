@@ -1,0 +1,41 @@
+* {margin:0;padding:0;border:0;}
+body {background:#DDD;color:black;font-family: Arial, Verdana, Tahoma, sans-serif;font-size:13px;text-align:center;margin-top:25px;}
+#stranka {width:975px;margin:0 auto;margin-top: 20px;text-align:left;border: 1px solid #C0C0C0;background:#F0F0F0;}
+
+h1 {vertical-align:baseline; margin: 10px; padding: 0px;position: relative;width: 950px;height: 300px;overflow: hidden;clear: both;text-align: center;color: white;border: 1px solid #82A8FF;}
+h1 span {vertical-align:baseline; display: block;position: absolute; left: 0; top: 0px; z-index: 1width: 950px; height: 300px;margin: 0; padding: 0px;background-image: url(img/logo.png);
+background-repeat: top left no-repeat;}
+h1 span a {display: block;width: 950px;height: 300px;}
+
+#menu {width:200px;float:right;margin-right:10px; padding-bottom: 20px}
+#menu h2 {font-weight:bold; background: url('img/title.png');height:24px;padding-left:10px;padding-top:4px;color:#484848;font-size:15px;border: 1px solid #82A8FF;}
+#menu ul li{display: block;float: right;width: 200px;}
+#menu ul li a{font-size: 12px; background: url('img/section.png');color: black;text-decoration: underline;display: block;height:24px;padding-left:10px;padding-top:4px;color:#484848;font-size:15px;border: 1px solid #82A8FF;margin-top:10px;}
+#menu ul li a:hover{background: url('img/section_hover.png');text-decoration:none;border: 1px solid #999;}
+
+#obsah {width:740px ;margin:10px;}
+#obsah h2 {background: #EAEAEA;color:#484848;height:24px;padding-left:10px;padding-top:4px;font-size:15px;margin-top:10px}
+#obsah p {color:black;margin-top:10px; margin-left:10px}
+#obsah ul li{margin-left:20px}
+#obsah a {color:black;}
+#obsah a:hover {color:#17629F;text-decoration:none;}
+
+#doc li {margin:10px;margin-left:20px;font-weight:bold; font-size:14px}
+#doc li ul li{margin-left:20px;font-weight:normal; font-size:12px}
+
+#code {background: black; color: #FFFFFF; padding: 5px; width: 90%; margin-left: 10px; margin: 5px}
+
+#pata {font-weight:bold;margin:10px;clear:both;background: url('img/paticka.png');text-align:center;height:24px;padding-left:10px;padding-top:4px;color:#484848;font-size:15px;border: 1px solid #82A8FF;}
+#pata a {color:black;}
+#pata a:hover {color:#17629F;text-decoration:none;}
+
+#pic {margin: 10px}
+#pic img {max-width: 720px; float: right; margin: 5px; margin-left:10px; margin-right: -10px; padding: 10px; border: solid black 1px; background-color: white}
+#pic p {float: left; margin-top: -3px; margin-bottom: 10px}
+blockquote
+{
+margin: 10px;
+font-style: italic;
+}
+
+.nahledovy {float:left;margin:1px;}

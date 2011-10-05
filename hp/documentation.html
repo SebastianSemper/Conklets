@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <head>
+  
+  <title>Conklets on Sourceforge.net</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection">
+  
+</head>
+<body>
+<div id="stranka">
+
+<h1>
+<span>The fast and nifty Cairo-driven frontend for Conky!<a href="http://conklets.sourceforge.net/"></a></span>
+
+</h1>
+
+
+<div id="menu">
+<h2>Navigation</h2>
+<ul>
+<li><a href="https://sourceforge.net/projects/conklets/develop" title="Contribute">Contribute</a></li>
+<li><a href="screenshots.html" title="Screenshots">Screenshots</a></li>
+<li><a href="https://sourceforge.net/projects/conklets/files/" title="Download">Download</a></li>
+<li><a href="documentation.html" title="Documenation">Documenation</a></li>
+<li><a href="contact.html" title="Contact">Contact</a></li>
+<li><a href="#" title="FAQ">FAQ</a></li>
+</ul>
+</div>
+
+
+<div id="obsah">
+<h2><strong>Documenation</strong></h2>
+<p>Here will be published all information on the internals within Conklets. There is made a huge effort to keep it in sync with the latest release available to allow a fast switch/start with Conklets.</p>
+<div style="background: #E0E0E0;color:#484848; width: 300px; padding: 10px; margin: 20px; margin-left: 0px;">
+<ul>
+	<li><a href="#basic">Basic Explanations</a></li>
+	<li><a href="#setup">Setup</a>
+		<ul>
+			<li><a href="#karmic">Karmic Koala</a></li>
+			<li><a href="#subkarmic">older than Karmic Koala</a></li>
+		</ul>
+	</li>
+	<li><a href="#structure">File structure</a></li>
+	<li><a href="#variables">Variables</a>
+		<ul>
+			<li><a href="#appearance">Appearance</a></li>
+			<li><a href="#settings">Settings</a></li>
+		</ul>
+	</li>
+	<li><a href="#widgets">Widgets</a>
+		<ul>
+			<li><a href="#processes">Process Monitor</a></li>
+			<li><a href="#processes">Graph</a></li>
+			<li><a href="#processes">Bar Graph</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<ol id="doc">
+<li><a name="basic">Basic Explanations</a></li>
+<p>You might wonder how some redneck would want to develop something like these Conklets here available and moreover how the hell it is done. It is rather easy. When you browse through the net and look for some nice and modern conky-configs you might come to the conclusion that at one hand the possibilities with Conky are litteraly endless but on the other hand you might find that the possibilities to actually display the information gathered by Conky are rather few and not very appealing. I found some basic scripts extending Conky with Lua and its bindings to Cairo. So after some research in Cairo I decided to start with a framework that can use Conky variables and thisplay them in a new fashion. So Conklets use Conky to gather the information and Cairo/Imlib2 to display them. This combination offers again a vast amount of customizations you can apply to your desktop and allows you to push system monitoring on linux to a whole new level!</p>
+<li><a name="setup">Setup</a></li>
+	<ul>
+		<li><a name="karmic">Karmic Koala 9.10</a></li>
+			<p>Currently there are only Debian based distros supported. But installing it on Karmic is rather straightforward. Download the latest .deb-package and invoke:</p>
+			<div id="code">sudo dpkg -i conklets.deb</div>
+			<p>To start conklets with the default config just type into the terminal:</p>
+			<div id="code">conklets</div>
+		<li><a name="subkarmic">Not Karmic</a></li>
+		<p>Most of the other Debian based distros don't offer the proper Conky version which supports Cairo and Lua. So either you compile Conky yourself which is well explained on their homepage, or if you use *Ubuntu or derivatives (I use Crunchbang Linux) you can simply use the following PPA:<br>
+		<a href="https://launchpad.net/~norsetto/+archive/ppa/+packages" target="_blank">https://launchpad.net/~norsetto/+archive/ppa/+packages</a></p>
+		<p>After adding this PPA you can continue with the instruction giving above for Karmic Koala</p>
+	</ul>
+
+<li><a name="structure">File structure</a></li>
+<p>After the installation there is a hidden folder in the user's home directory that contains first of all a conky config called "conklets".</p>
+<p>Moreover in the very same folder there should be a files called "content.lua" which contains all the variables over which the enduser can take control like colours, font and lines and most importantly the Widgets that are to be displayed.</p>
+<p>To allow an easy start of conklets there is a little script within /usr/bin called "conklets" which allows you to start conklets right away with this command. The configfile that is used for Conky is the one in your respective home-folder.</p>
+<p>The actual engine and the license are placed within /etc/conklets which is also the whole source code since there are no compiled binaries needed.</p>
+<li><a name="variables">Variables</a></li>
+	The file located at ~/.conklets/content.lua contains some variable assignments that greatly influence the behaviour and especially look of all your conklets.
+	<ul>
+		<li><a name="#appearance">Appearance</a></li>
+		<li><a name="#settings">Settings</a></li>
+	</ul>
+<li><a name="widgets">Widgets</a></li>
+	<ul>
+		<li><a name="#processes">Process Monitor</a></li>
+		<li><a name="#graph">Graph</a></li>
+		<li><a name="#bargraph">Bar Graph</a></li>
+	</ul>
+
+
+
+
+</ol>
+
+
+</div>
+
+<p id="pata">
+&copy 2009 by: Sebastian Semper</p>
+</div>
+</html>

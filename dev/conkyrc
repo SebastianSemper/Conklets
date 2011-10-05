@@ -1,0 +1,18 @@
+background false
+own_window true
+own_window_type normal
+use_xft true
+double_buffer yes
+
+update_interval 1
+
+lua_load core.lua
+lua_draw_hook_pre conklets_startup
+lua_shutdown_hook conklets_cleanup
+
+TEXT
+$uptime
+
+
+
+
